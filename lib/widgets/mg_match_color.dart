@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mg_match_color/screens/home_Screen.dart';
+import 'package:mg_match_color/screens/home_screen.dart';
 
 class MgMatchColor extends StatelessWidget {
   const MgMatchColor({super.key});
