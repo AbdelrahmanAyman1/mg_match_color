@@ -19,6 +19,7 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
       color: Color(0xff281066),
       child: SingleChildScrollView(
         child: BottomNavigationBar(
+          enableFeedback: false,
           currentIndex: currentIndex,
           selectedItemColor: Color(0xfffbd992),
           unselectedItemColor: Colors.grey,
