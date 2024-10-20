@@ -34,10 +34,10 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
           backgroundColor: Colors.transparent,
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(Icons.list_rounded, size: 35), label: ''),
+                icon: Icon(Icons.view_list_rounded, size: 35), label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.settings_suggest_outlined,
+                  Icons.settings_suggest_rounded,
                   size: 35,
                 ),
                 label: ''),
