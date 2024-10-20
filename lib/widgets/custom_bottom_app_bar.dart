@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 class CustomBottomAppBar extends StatefulWidget {
   const CustomBottomAppBar({
     super.key,
+    required this.currentIndex,
+    required this.onTab,
   });
-
+  final int currentIndex;
+  final void Function(int) onTab;
   @override
   State<CustomBottomAppBar> createState() => _CustomBottomAppBarState();
 }
 
 class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
-  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
@@ -20,14 +22,10 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
       child: SingleChildScrollView(
         child: BottomNavigationBar(
           enableFeedback: false,
-          currentIndex: currentIndex,
+          currentIndex: widget.currentIndex,
           selectedItemColor: Color(0xfffbd992),
           unselectedItemColor: Colors.grey,
-          onTap: (index) {
-            setState(() {
-              currentIndex = index;
-            });
-          },
+          onTap: widget.onTab,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           elevation: 0,
